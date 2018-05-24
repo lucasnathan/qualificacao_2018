@@ -1,0 +1,82 @@
+\chapter{Revisão Bibliográfica}
+
+O crescimento em popularidade, a facilidade de publicação e a dificuldade de controle, transformaram as redes sociais em um oceano de informações que inunda nossas vidas todos os dias. A facilidade de compartilhamento das informações possibilita que um indivíduo atinja uma quantidade de pessoas semelhante ou maior que a de grandes instituições e meios de comunicação. Essa sobrecarga de informações têm gerado grande preocupação, pois pode levar à criação de conteúdos enganosos e fraudulentos. A situação se agravou ainda mais com as evidências de que as notícias falsas (\emph{fake news}) circuladas nas redes sociais influenciaram as eleições norte-americanas de 2016 (\cite{allcott_social_2017}). Quanto mais as pessoas são influenciadas, maior a necessidade de encontrar soluções que identifiquem essas informações e auxiliem as pessoas nestes ambientes.
+
+\section{Avaliando credibilidade de informações em redes sociais}
+
+Existe uma ampla gama de conteúdo na literatura que discute a avaliação de credibilidade de informações em redes sociais, nesta seção serão descritos alguns destes trabalhos. Baseando-se na revisão da literatura realizada por \cite{almansour_evaluation_2014} categorizamos os métodos discutidos nos trabalhos em cinco categorias.
+
+\subsection{Aprendizagem supervisionada}
+
+Uma definição formal de aprendizagem supervisionada é encontrada no trabalho de \cite{russell_artificial_2010} e discute que a aprendizagem supervisionada descreve um agente computacional que observa exemplos de pares ordenados entrada/saída e aprende uma função que mapeia para cada nova entrada uma saída. É natural então que esse conceito possa ser utilizado na classificação de informações, como é o caso dos trabalhos apresentados em seguida.
+
+%\cite{gamble_quality_2011} e \cite{castillo_information_2011} ambos apresentam exemplos de aplicação de arvores de decisão para a classificação de credibilidade de informação. Como \cite{gamble_quality_2011} apresenta um foco maior à informações científicas, neste trabalho será discutido a aplicação de \cite{castillo_information_2011}. 
+
+O trabalho de \cite{castillo_information_2011} apresentou estudo promissor para classificação de credibilidade com resultados chegando a 86\% de precisão usando o algorítimo de arvore de decisão J-48. Eles usaram classificadores supervisionados para: 
+\begin{itemize}
+    \item classificação de notícias / bate-papo de 2.524 casos;
+    \item Avaliação de credibilidade de 747 tópicos de notícias.
+\end{itemize}
+Seus resultados mostraram que características como nível de propagação, inclusão de URL e sentimento ajudaram efetivamente classificar tópicos automaticamente como credíveis ou não credível. No entanto, seu método foi baseado na credibilidade do tópico em vez de considerarem \emph{tweets} individuais. É o que encontramos no trabalho de \cite{kang_modeling_2012} onde foi dado foco nos \emph{tweets} individuais. Em seu estudo eles identificaram classificações de credibilidade de 1023 \emph{tweets} coletados para um tópico específico (Líbia). Os autores treinaram classificadores Bayesiano usando \emph{tweets} com anotações atribuídas manualmente, com base nos recursos relacionado a diferentes modelos: 
+
+\begin{itemize}
+    \item Modelo que usa recursos de origem;
+    \item Modelo que usa recursos de conteúdo;
+    \item Modelo híbrido que usa ambos recursos de fonte e conteúdo.
+\end{itemize}
+
+Para o experimento completo, foi utilizado um algoritmo de aprendizagem J-48; o melhor resultado alcançado possui uma porcentagem de acerto de 88.17\% e foi obtido usando o modelo de características de origem.
+
+
+\subsection{Análise estatística}
+
+Em seu trabalho \cite{nott12977} define análise estatística como uma abordagem científica para a compreensão de uma informação que se encontra em sua forma numérica. Ele ainda discute que a menos que o conhecimento especializado esteja disponível para explicar e validar os resultados da análise estatística, eles não podem ser interpretados e, portanto, nada é alcançado. Em outras palavras, as observações obtidas por análise estatística são de valor limitado se não houver entendimento, por mais limitado que seja, dos processos que geraram os dados.
+
+\cite{mendoza_twitter_2010} realizaram uma análise estatística com o objetivo de examinar a capacidade da rede social de discriminar entre notícias legítimas e rumores falsos. A pesquisa avaliou estatisticamente o comportamento dos usuários em crises (terremotos chilenos). Foram utilizados 42 a 700 \emph{tweets} relacionados a 7 casos confirmados verdadeiros e 7 rumores falsos. Então, cada \emph{tweet} foi rotulado manualmente da seguinte maneira: 
+
+\begin{itemize}
+    \item Afirmação: Confirmando a informação do caso; 
+    \item Negação: Refutando o caso;
+    \item Questionamento: Realizando uma pergunta sobre o caso; 
+    \item Não-relacionado.
+\end{itemize}
+
+Seus resultados mostraram que a porcentagem de \emph{re-tweets} de \emph{tweets} verdadeiros e falsos são diferentes, e os textos dos rumores foram têm maior probabilidade de conter uma indicação de dúvida ou negação. Isso indica que o existe uma chance maior de alguém refutar uma informação falsa do que uma informação verdadeira.
+
+\subsection{Similaridade com fontes confiáveis}
+
+Nesta categoria calcula-se um nível de similaridade dentre dois elementos: um objeto desconhecido e outro objeto com as características desejadas. Então, é definido um limiar que classifica o elemento de acordo com o grau de semelhança entre os dois.
+
+A pesquisa apresentada por \cite{alkhalifa_experimental_2011} é um exemplo desta categoria, nela foi realizada a a avaliação da credibilidade em notícias usando um método baseado em evidências. Eles usaram duas abordagens para avaliar os níveis de credibilidade da mensagem (baixo, alto e questionável): a primeira abordagem é baseada em limiares de similaridade calculados entre o conteúdo de postagens do Twitter e fontes de notícias verificadas, como \emph{SPA}, \emph{Aljazeera} e \emph{Google News}. A segunda abordagem é baseada em uma combinação linear do valor de similaridade, além de um conjunto de recursos relacionados ao conteúdo e à fonte. 
+
+\cite{alkhalifa_experimental_2011} avaliaram seu resultado de classificação em comparação com a avaliação de três especialistas políticos usando um conjunto de dados de 29 \emph{tweets} e quatro artigos de notícias de dois tópicos. Os resultados indicam que a primeira abordagem é mais eficaz na avaliação da credibilidade dos \emph{tweets}. No entanto, usando essa abordagem, o sistema foi capaz de atribuir \emph{tweets} a apenas dois níveis de credibilidade: baixo e alto, enquanto na segunda abordagem, foi possível atribuir os \emph{tweets} aos três níveis de credibilidade  (baixo, alto e questionável). 
+
+\subsection{Análise de grafos}
+
+A análise dos grafos que representam as interações entre as pessoas em redes sociais, podem ser de grande ajuda na classificação da credibilidade de informação nestas redes.
+
+O trabalho de \cite{yekang_yang_exploiting_2015} analisa 3 conjuntos de características:
+
+\begin{enumerate}
+    \item Análise de satisfação: utiliza os comentários, as reações e o tempo que levou para um usuário expressar sua opinião em relação à informação para extrair um índice de satisfação emocional;
+    
+    \item Análise do perfil do usuário: utiliza a idade, o número de seguidores e o número de pessoas seguidas e a taxa em que o conteúdo gerado pelo usuário foi compartilhado por outros. Essas características visam mitigar usuários com intenções maliciosas na rede;
+
+    \item Análise da rede social: utiliza o grafo de rede social dos usuários para descobrir se esses possuem ligações fortes ou fracas, ou seja, uma grande quantidade relacionamentos em comum entre dois nós em um grafo de rede social;
+\end{enumerate}
+
+Os resultados experimentais indicaram que o estudo tem um efeito positivo na detecção de rumores na rede social chinesa \emph{Weibo}, que é fundamental para fornecer ferramentas para validar a credibilidade da informação \emph{on-line}.
+
+\subsection{Votação}
+
+Essa estratégia se utiliza do conhecimento dissolvido pelos usuários participantes de uma rede social, ou de especialistas em determinado para avaliar a credibilidade das informações transmitidas entre os usuários.
+
+A pesquisa de \cite{canini_finding_2011} considera as relações entre os usuários nas redes sociais como votos de confiança. Para ilustrar esse pensamento foi criado um algoritmo que utiliza a análise de modelagem de tópicos e status social dos usuários para gerar uma lista classificada de usuários relevantes e credíveis para qualquer tópico específico.
+
+O algoritmo usa o Twitter para identificar usuários associados a um tópico de consulta. Em seguida, ele filtra e classifica os resultados identificando usuários cujos seguidores aparecem com frequência no resultado da pesquisa. Para concluir, a modelagem de tópicos é utilizada para analisar o conteúdo textual dos usuários de pontuação mais alta e re-classificá-los por este critério.
+
+Para avaliar o algoritmo, os pesquisadores utilizaram os participantes da \emph{Amazon Mechanical Turk}\footnote{\emph{Amazon Mechanical Turk} (MTurk) opera um mercado para trabalhos que requerem inteligência humana. O serviço web MTurk permite que as empresas acessem programaticamente esse mercado e tenham acesso a uma força de trabalho diversificada e sob demanda. Os desenvolvedores podem aproveitar esse serviço para criar inteligência humana diretamente em suas aplicações.} classificam os principais usuários listados para cinco tópicos de pesquisa. Comparando rankings de algoritmos com rankings fornecidos pelo site \emph{WeFollow}, seu algoritmo mostra um grande potencial para ajudar os usuários a identificar usuários interessantes a serem seguidos no Twitter.
+
+\section{Considerações finais}
+
+Os trabalhos encontrados possuem excelentes formas de avaliação da informação nos meios de redes sociais, porém a maioria deles se utiliza de softwares que automatizam o processo de avaliação da credibilidade, tomando de certa forma o controle do usuário. Neste trabalho busca-se utilizar o conhecimento da multidão para fornecer ferramentas que aumentam o poder do usuário, auxiliando, de forma que ele possa decidir se o conteúdo que está acessando é de qualidade ou não.

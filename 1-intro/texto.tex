@@ -1,0 +1,54 @@
+%=====================================================
+
+% A introdução geral do documento pode ser apresentada através das seguintes seções: Desafio, Motivação, Proposta, Contribuição e Organização do documento (especificando o que será tratado em cada um dos capítulos). O Capítulo 1 não contém subseções\footnote{Ver o Capítulo \ref{cap-exemplos} para comentários e exemplos de subseções.}.
+
+\chapter{Introdução}
+
+%tentei colocar a justificativa, e os objetivos aqui... pode ser assim?
+
+\section{Motivação e contextualização}
+
+Redes sociais (como \emph{Facebook, Google+, Twitter, etc...}) são populares mundialmente, permitindo que usuários conversem uns com os outros, organizem eventos, compartilhem opiniões, fotografias, artigos, informações e ainda permitem que eles construam conexões entre si. De acordo com \cite{boyd_social_2007}, um site de rede social é um serviço online que permite que indivíduos: (1) construam um perfil público ou semi-publico dentro do sistema; (2) articulem uma lista de outros usuários que compartilham uma conexão; e (3) visualizem e cruzem sua lista de contatos com as listas feitas por outros usuários. Ainda segundo \cite{boyd_social_2007} essas plataformas são bastante variadas nos seus propósitos e culturas, enquanto algumas são direcionadas à um público diversificado, outras são focados em atrair pessoas que compartilham características comuns. Na maior parte dos casos esses sites conectam pessoas que possuem vínculos fora do ambiente online, e estendem essas conexões permitindo que os usuários se articulem na rede através da troca de informações e da expansão de suas próprias redes de contato.
+
+Existe uma facilidade de comunicação entre pessoas que participam dessas redes. No entanto quanto maior o número de usuários maior a sobrecarga de informações, o que pode confundir os usuários e fornecer o ambiente perfeito para a proliferação de conteúdos falsos e informações não verificáveis. A pesquisa realizada por \cite{nic_newman_digital_2017} do Instituto Reuters confirma este pensamento, mostrando que nos últimos seis anos houve um grande crescimento no número de pessoas que utilizam redes sociais online para acessar notícias diárias. Nos Estados Unidos mais da metade das amostras (51\%) acessam suas notícias através das mídias sociais, 5\% a mais que no ano de 2016 e o dobro em relação ao ano de 2013. Além disso, os resultados indicam que no Brasil o uso de aplicativos de mensagens (\emph{Facebook Messenger, WhatsApp e Telegram}) como fonte de informação tem crescido a ponto de rivalizar com os sites de redes sociais. A pesquisa conclui que o crescimento dos aplicativos de mensagem devem-se a privacidade fornecida pelos mesmos e a falta de filtro nas informações compartilhadas.
+
+Segundo \cite{rasmus_kleis_nielsen_news_2017} o grande fluxo de desinformação em torno da eleição presidencial de 2016 alarmou o mundo para o problema das notícias falsas (popularizado pelo termo em inglês, \emph{Fake News}) que circulavam nas redes sociais, este termo têm ganho uma grande importância desde então. Consequentemente, a avaliação da credibilidade das informações que circulam nesses ambientes têm se transformado em um tópico de extrema importância.
+
+% da pra colocar alguns casos de fake news aqui para dar mais forca ao argumento....
+
+\cite{allcott_social_2017} definem \emph{fake news} como sendo artigos de notícia intencionalmente falsos, que podem ser verificados como falsos, e que podem enganar leitores. Entretanto existem outros colegas de \emph{fake news} que são deixados de fora desta definição: (1) erros cometidos por acidente; (2) rumores que não se originaram de um artigo em particular; (3) teorias da conspiração (essas são por natureza difíceis de verificar como verdadeiras ou falsas); (4) sátiras que dificilmente seriam confundidas como verdade; (5) falsas declarações de políticas; (6) relatórios que são tendenciosos mas não completamente falsos.
+
+
+% discutir sobre alguns casos historicos de fake news fora do ambiente online
+
+Porém a disseminação de notícias falsas, boatos, desinformação e fraudes não são algo novo. \cite{robert_darnton_true_2017} cita que em 1522 Pietro Aretino tentou manipular a eleição pontifícia, escrevendo sonetos perversos sobre todos os candidatos (exceto o favorito de seus patronos, os Medici) e colando-os no busto de uma figura conhecida como Pasquino para que o público os vissem, perto da \emph{Piazza Navona} em Roma . O \emph{"pasquinate"} (em italiano), em seguida, tornou-se um gênero comum de difundir notícias desagradáveis, a maioria falsa, sobre figuras públicas.
+
+Embora as pasquinagens (em português) nunca tenham desaparecido, foram sucedidos no século XVII por um gênero mais popular, o \emph{"canard"}, uma versão da notícia falsa que se alastrou pelas ruas de Paris nos próximos duzentos anos. Os \emph{canards} eram impressos às vezes com design e gravuras para parecerem mais crédulos. Um \emph{best-seller} da década de 1780 anunciou a captura de um monstro no Chile que deveria ser enviado para a Espanha. Tinha a cabeça de uma Fúria, asas como um morcego, um corpo gigantesco coberto de escamas e uma cauda semelhante a de um dragão. Durante a Revolução Francesa, os gravadores inseriram o rosto de Marie-Antoinette nas antigas placas de cobre, e o \emph{canard} assumiu uma nova vida, desta vez como propaganda política intencionalmente falsa. Embora seu impacto não possa ser medido, certamente contribuiu para o ódio patológico da rainha, o que levou à sua execução em 16 de outubro de 1793.
+
+Portanto, pode-se perceber que redes sociais online não contribuíram para a criação do fenômeno da disseminação das notícias falsas. Entretanto, proporcionou um ambiente propício para que essas informações se alastrassem de forma viral. 
+
+\section{Objetivo}
+
+O objetivo deste trabalho é fornecer artifícios que auxiliem os brasileiros a decidir em quais informações confiar nos ambientes de redes sociais. E a hipótese levantada é que a aplicação conceitos de Autoridade Cognitiva em redes sociais auxilia na identificação de notícias falsas e das entidades que as produzem. 
+
+\section{Estrutura da proposta}
+
+Para alcançar este objetivo destaca-se a necessidade de desenvolvimento de todas as etapas da proposta pois nenhum processo, que visa a solução de um problema, pode ser considerado completo até que uma avaliação deste seja realizada (\cite{jayaratna_understanding_1994}).
+
+\begin{itemize}
+    \item \textbf{Modelo conceitual:} Este será um modelo de rede social fundamentado na teoria de Autoridade Cognitiva (AC) de \cite{Wilson1983}, explorando a natureza colaborativa e informal da Internet;
+    \item \textbf{Protótipo:} O protótipo irá por em prática as ideias apresentadas no modelo citado, é a partir desta implementação que o modelo será avaliado;
+    \item \textbf{Experimentos e avaliação:} O experimento irá por a prova o modelo e a implementação do protótipo a fim de validar a hipótese apresentada. Serão então desenvolvidos cenários que desafiarão a hipótese, afim de descobrir se ela é válida, inválida ou se é válida em cenários específicos.
+\end{itemize}
+
+
+
+%essa definição foi a que eu achei mais interessante, mas ainda fico em dúvida sobre utilizar a 5 e a 6
+
+
+
+%mostra que Devemos também ponderar o motivo das pessoas não confiarem nos meios de comunicação atuais. Segundo a pesquisa realizada por \cite{nic_newman_bias_2017}, as matérias imparciais, tendenciosas e com motivos próprios (além do repasse de informação) por parte das agências de jornalismo são as maiores razões para as pessoas perderem a confiança nos meios de comunicação, piorado pelo declínio dos padrões de publicação, acarretados pela competição com os novos modelos de negócio online. Para concluir, o estudo diz que a confiança que as pessoas depositam nos conteúdos vistos nas redes sociais é baixo, porém aponta que isso acontece em função do modelo em prática, que permite que qualquer um publique sem checagem de fatos, ou com com algoritmos que as vezes favorecem conteúdos extremos ou controversos.
+
+%\section{Objetivos}
+
+%A proliferação de notícias falsas, boatos e desinformação não é um problema novo na nossa sociedade, segundo \cite{pfaltzgraff_soviet_1981}, no decorrer da história da humanidade a desinformação foi utilizada como meio de controle de massas e de desestabilização de nações antes da popularização da Internet. Portanto, a popularização das redes sociais apenas forneceram artifícios que contribuíram para o aumento do problema. 
